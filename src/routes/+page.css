@@ -1,0 +1,351 @@
+/* 2026 Website — full styles */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #160808;
+  overflow: hidden;
+  cursor: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.unlocked #scene {
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+#scene {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+#logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+#logo-wrapper {
+  position: relative;
+}
+
+@keyframes logo-pulse {
+  0%, 100% { filter: brightness(0.9); }
+  50% { filter: brightness(1.2); }
+}
+
+#logo-img {
+  display: block;
+  max-width: min(800px, 95vw);
+  width: 95vw;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  animation: logo-pulse 3.5s ease-in-out infinite;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+#effect-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@keyframes prompt-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+#tap-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  background: #160808;
+  border: none;
+}
+
+#tap-gate.done {
+  display: none;
+}
+
+#click-prompt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fdc10a;
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 8px rgba(253, 193, 10, 0.7);
+  animation: prompt-pulse 1.8s ease-in-out infinite;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 2001;
+}
+
+#click-prompt.hidden {
+  opacity: 0;
+  animation: none;
+}
+
+.prompt-sub {
+  display: block;
+  font-size: clamp(7px, 2.2vw, 10px);
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  margin-top: 10px;
+  font-family: monospace;
+  text-transform: uppercase;
+  white-space: normal;
+  text-align: center;
+  max-width: 90vw;
+}
+
+#email-signup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 8px;
+}
+
+#email-signup .signup-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #fdc10a;
+  opacity: 0.7;
+  margin: 0;
+}
+
+#email-signup .signup-form {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid rgba(253, 193, 10, 0.45);
+  box-shadow: 0 0 10px rgba(253, 193, 10, 0.15);
+}
+
+#email-signup .signup-form input[type="email"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fdc10a;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 9px 14px;
+  width: 220px;
+}
+
+#email-signup .signup-form input[type="email"]::placeholder {
+  color: rgba(253, 193, 10, 0.35);
+}
+
+#email-signup .signup-form input[type="email"]:focus {
+  box-shadow: inset 0 0 8px rgba(253, 193, 10, 0.1);
+}
+
+#email-signup .signup-form button {
+  background: rgba(253, 193, 10, 0.12);
+  border: none;
+  border-left: 1px solid rgba(253, 193, 10, 0.45);
+  color: #fdc10a;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#email-signup .signup-form button:hover:not(:disabled) {
+  background: rgba(253, 193, 10, 0.25);
+  box-shadow: 0 0 12px rgba(253, 193, 10, 0.3);
+}
+
+#email-signup .signup-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+#email-signup .signup-confirm {
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #fdc10a;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  text-shadow: 0 0 12px rgba(253, 193, 10, 0.6);
+}
+
+#email-signup .signup-confirm.visible {
+  opacity: 1;
+  height: auto;
+}
+
+.social-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fdc10a;
+  filter: drop-shadow(0 0 6px rgba(253, 193, 10, 0.85)) drop-shadow(0 0 12px rgba(253, 193, 10, 0.4));
+  transition: transform 0.2s ease, filter 0.2s ease;
+  text-decoration: none;
+}
+
+.social-bar a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(253, 193, 10, 0.9));
+}
+
+.social-bar svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+#crt {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+}
+
+#crt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0,0,0,0.18) 3px,
+    rgba(0,0,0,0.18) 4px
+  );
+}
+
+#crt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 45%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 0; }
+  89% { opacity: 0; }
+  90% { opacity: 0.04; }
+  91% { opacity: 0; }
+  95% { opacity: 0.02; }
+  96% { opacity: 0; }
+}
+
+#crt-flicker {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 501;
+  background: #000;
+  opacity: 0;
+  animation: crt-flicker 7s linear infinite;
+}
+
+#ambient-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 48;
+}
+
+#glitch-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+#noise-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 498;
+  image-rendering: pixelated;
+  opacity: 0.03;
+}
+
+#crt-roll {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 28vh;
+  pointer-events: none;
+  z-index: 499;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 25%,
+    rgba(255, 255, 255, 0.045) 50%,
+    rgba(255, 255, 255, 0.02) 75%,
+    transparent 100%
+  );
+  animation: crt-roll 9s linear infinite;
+}
+
+@keyframes crt-roll {
+  from { transform: translateY(-28vh); }
+  to { transform: translateY(105vh); }
+}
