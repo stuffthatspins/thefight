@@ -317,11 +317,11 @@ export function initFightEffects() {
     if (clickPrompt) {
       clickPrompt.style.animation = 'none';
       clickPrompt.style.opacity = '1';
-      clickPrompt.innerHTML = 'crank it up . here we go.<span class="prompt-sub" id="prompt-sub-line">speakers on · cursor ready</span>';
+      clickPrompt.innerHTML = 'crank it up . here we go.<span class="prompt-sub" id="prompt-sub-line">speakers on</span>';
     }
     setTimeout(() => {
       const sub = document.getElementById('prompt-sub-line');
-      if (sub) sub.textContent = 'full magic on desktop';
+      if (sub) sub.textContent = 'the logo is your instrument';
     }, 2250);
     try {
       const p = sounds[0];
