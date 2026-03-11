@@ -319,7 +319,7 @@ export function initFightEffects() {
     if (clickPrompt) {
       clickPrompt.style.animation = 'none';
       clickPrompt.style.opacity = '1';
-      clickPrompt.innerHTML = 'crank it up . here we go.<span class="prompt-sub" id="prompt-sub-line">speakers on</span>';
+      clickPrompt.innerHTML = 'crank it up - here we go<span class="prompt-sub" id="prompt-sub-line">speakers on</span>';
     }
     setTimeout(() => {
       const sub = document.getElementById('prompt-sub-line');
