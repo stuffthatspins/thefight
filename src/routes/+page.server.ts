@@ -2,6 +2,7 @@ import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { createClient } from '@supabase/supabase-js';
 import { env } from '$env/dynamic/private';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 
 export const actions: Actions = {
   subscribe: async ({ request }) => {
@@ -14,7 +15,7 @@ export const actions: Actions = {
       return fail(400, { error: 'Invalid email' });
     }
 
-    const url = env.PUBLIC_SUPABASE_URL;
+    const url = PUBLIC_SUPABASE_URL;
     const key = env.SUPABASE_SERVICE_ROLE_KEY;
     if (!url || !key) {
       return fail(500, { error: 'Server configuration error' });

@@ -9,19 +9,41 @@
   let form = $derived($page.form);
   let showMessage = $derived(!!(form && (form.subscribed === true || form.message || form.error)));
   let message = $derived(form?.message ?? form?.error ?? '');
+
+  onMount(() => {
+    initFightEffects();
+  });
 </script>
 
 <svelte:head>
-  <title>The Fight</title>
+  <title>The Fight | Eli Maiman & Ben Davis | New Band from Walk the Moon & Bad Veins</title>
+  <meta name="description" content="The Fight is a new rock band featuring Eli Maiman, guitarist of Walk the Moon (Nicholas Petricca, Kevin Ray, Sean Waugaman). Fronted by Ben Davis of Bad Veins. Cincinnati indie rock." />
+  <meta name="keywords" content="The Fight, The Fight band, Eli Maiman, Ben Davis, Walk the Moon, Bad Veins, Nicholas Petricca, Kevin Ray, Sean Waugaman, Walk the Moon new band, Walk the Moon new project, Eli Maiman new band, Ben Davis new band, Cincinnati, Cincinnati rock, Cincinnati indie rock, indie rock, pop rock, alternative rock, thefightdontstop" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thefightdontstop.com" />
+  <meta property="og:title" content="The Fight | New Rock Band Featuring Members of Walk the Moon & Bad Veins" />
+  <meta property="og:description" content="The Fight is the new project from Eli Maiman of Walk the Moon and Ben Davis of Bad Veins. Cincinnati indie rock. Join the fight." />
+  <meta property="og:image" content="https://thefightdontstop.com/image/og-image.png" />
+  <meta property="og:image:alt" content="The Fight band — Eli Maiman and Ben Davis" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Fight | New Rock Band Featuring Members of Walk the Moon & Bad Veins" />
+  <meta name="twitter:description" content="The Fight is the new project from Eli Maiman of Walk the Moon and Ben Davis of Bad Veins. Cincinnati indie rock. Join the fight." />
+  <meta name="twitter:image" content="https://thefightdontstop.com/image/og-image.png" />
+  <meta name="twitter:image:alt" content="The Fight band — Eli Maiman and Ben Davis" />
+
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
   <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
 </svelte:head>
 
-<button type="button" id="tap-gate" onclick={() => (window as unknown as { unlockAudio?: () => void }).unlockAudio?.()}>
-  <span id="click-prompt">the fight don't stop</span>
-</button>
+<button type="button" id="tap-gate" onclick={() => (window as unknown as { unlockAudio?: () => void }).unlockAudio?.()}></button>
+<div id="click-prompt">the fight don't stop</div>
 
 <div id="scene">
   <div id="logo-area">
