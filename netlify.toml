@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "SENDGRID_FROM_NAME,PUBLIC_SUPABASE_URL"
