@@ -312,6 +312,8 @@ export function initFightEffects() {
   const unlockAudio = () => {
     if (audioUnlocked) return;
     audioUnlocked = true;
+    // Force-load all sounds now that we have user interaction (mobile ignores preload)
+    sounds.forEach((s) => { if (!s.src) return; s.load(); });
     const gate = document.getElementById('tap-gate');
     if (gate) gate.classList.add('done');
     if (clickPrompt) {
