@@ -30,9 +30,9 @@ body.unlocked #scene {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  background-image: url('/image/thistimeiswear.jpg');
+  background-image: url('/image/pressphoto.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 #hero-overlay {
@@ -371,4 +371,23 @@ body.unlocked #scene {
 @keyframes crt-roll {
   from { transform: translateY(-28vh); }
   to { transform: translateY(105vh); }
+}
+
+/* Landscape mobile: short screens */
+@media (max-height: 500px) and (orientation: landscape) {
+  #logo-img {
+    max-width: min(300px, 45vw);
+    width: 45vw;
+  }
+  #email-signup {
+    display: none;
+  }
+  .social-bar {
+    padding: 10px 0 12px;
+    gap: 20px;
+  }
+  .social-bar svg {
+    width: 18px;
+    height: 18px;
+  }
 }
