@@ -18,7 +18,7 @@
 <svelte:head>
   <title>The Fight | Eli Maiman & Ben Davis | New Band from Walk the Moon & Bad Veins</title>
   <meta name="description" content="The Fight is a new rock band featuring Eli Maiman, guitarist of Walk the Moon (Nicholas Petricca, Kevin Ray, Sean Waugaman). Fronted by Ben Davis of Bad Veins. Cincinnati indie rock." />
-  <meta name="keywords" content="The Fight, The Fight band, Eli Maiman, Ben Davis, Walk the Moon, Bad Veins, Nicholas Petricca, Kevin Ray, Sean Waugaman, Walk the Moon new band, Walk the Moon new project, Eli Maiman new band, Ben Davis new band, Cincinnati, Cincinnati rock, Cincinnati indie rock, indie rock, pop rock, alternative rock, thefightdontstop" />
+  <meta name="keywords" content="The Fight, The Fight band, The Fight music, The Fight shows, The Fight tour, The Fight merch, The Fight lyrics, the fight don't stop, thefightdontstop, Eli Maiman, Ben Davis, Walk the Moon, Bad Veins, Nicholas Petricca, Kevin Ray, Sean Waugaman, Walk the Moon new band, Walk the Moon new project, Eli Maiman new band, Ben Davis new band, This Time I Swear, Starting With Nothing, On The Radio, Smoke and Mirrors, Too Late, Rescue Me, I Dodged A Bullet, Rent Free, Hurt Like A Human, Will You Ghost, I Don't Want To Live In This World, Cincinnati, Cincinnati rock, Cincinnati indie rock, indie rock, pop rock, alternative rock, musician, producer" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
