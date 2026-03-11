@@ -46,6 +46,7 @@
 <div id="click-prompt">the fight don't stop</div>
 
 <div id="scene">
+  <div id="hero-overlay"></div>
   <div id="logo-area">
     <div id="logo-wrapper">
       <img id="logo-img" src="/image/logo.png" alt="The Fight" />

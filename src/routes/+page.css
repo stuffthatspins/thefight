@@ -30,9 +30,27 @@ body.unlocked #scene {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  background-image: url('/image/thistimeiswear.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.35) 35%,
+    rgba(0,0,0,0.35) 65%,
+    rgba(0,0,0,0.85) 100%
+  );
+  z-index: 0;
 }
 
 #logo-area {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +69,8 @@ body.unlocked #scene {
 
 #logo-img {
   display: block;
-  max-width: min(800px, 95vw);
-  width: 95vw;
+  max-width: min(520px, 70vw);
+  width: 70vw;
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
@@ -131,7 +149,11 @@ body.unlocked #scene {
 }
 
 #email-signup {
-  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 90px;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,6 +244,7 @@ body.unlocked #scene {
 
 .social-bar {
   position: absolute;
+  z-index: 1;
   bottom: 0;
   width: 100%;
   padding: 20px 0 30px;
