@@ -16,21 +16,21 @@
 </script>
 
 <svelte:head>
-  <title>The Fight | Eli Maiman & Ben Davis | New Band from Walk the Moon & Bad Veins</title>
+  <title>The Fight | Home</title>
   <meta name="description" content="The Fight is a new rock band featuring Eli Maiman, guitarist of Walk the Moon (Nicholas Petricca, Kevin Ray, Sean Waugaman). Fronted by Ben Davis of Bad Veins. Cincinnati indie rock." />
   <meta name="keywords" content="The Fight, The Fight band, The Fight music, The Fight shows, The Fight tour, The Fight merch, The Fight lyrics, the fight don't stop, thefightdontstop, Eli Maiman, Ben Davis, Walk the Moon, Bad Veins, Nicholas Petricca, Kevin Ray, Sean Waugaman, Walk the Moon new band, Walk the Moon new project, Eli Maiman new band, Ben Davis new band, This Time I Swear, Starting With Nothing, On The Radio, Smoke and Mirrors, Too Late, Rescue Me, I Dodged A Bullet, Rent Free, Hurt Like A Human, Will You Ghost, I Don't Want To Live In This World, Cincinnati, Cincinnati rock, Cincinnati indie rock, indie rock, pop rock, alternative rock, musician, producer" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thefightdontstop.com" />
-  <meta property="og:title" content="The Fight | New Rock Band Featuring Members of Walk the Moon & Bad Veins" />
+  <meta property="og:title" content="The Fight | Home" />
   <meta property="og:description" content="The Fight is the new project from Eli Maiman of Walk the Moon and Ben Davis of Bad Veins. Cincinnati indie rock. Join the fight." />
   <meta property="og:image" content="https://thefightdontstop.com/image/og-image.png" />
   <meta property="og:image:alt" content="The Fight band — Eli Maiman and Ben Davis" />
 
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Fight | New Rock Band Featuring Members of Walk the Moon & Bad Veins" />
+  <meta name="twitter:title" content="The Fight | Home" />
   <meta name="twitter:description" content="The Fight is the new project from Eli Maiman of Walk the Moon and Ben Davis of Bad Veins. Cincinnati indie rock. Join the fight." />
   <meta name="twitter:image" content="https://thefightdontstop.com/image/og-image.png" />
   <meta name="twitter:image:alt" content="The Fight band — Eli Maiman and Ben Davis" />
