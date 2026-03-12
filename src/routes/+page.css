@@ -163,7 +163,7 @@ body.unlocked #scene {
 
 #email-signup .signup-label {
   font-family: monospace;
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: #fdc10a;
@@ -221,6 +221,16 @@ body.unlocked #scene {
 #email-signup .signup-form button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+#email-signup .release-note {
+  font-family: monospace;
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #fdc10a;
+  opacity: 0.5;
+  margin: 4px 0 0;
 }
 
 #email-signup .signup-confirm {
