@@ -82,6 +82,7 @@
         {$navigating ? '…' : 'submit'}
       </button>
     </form>
+    <p class="release-note">debut album coming 2026</p>
     <p class="signup-confirm" id="signup-confirm" class:visible={showMessage}>
       {message}
     </p>
