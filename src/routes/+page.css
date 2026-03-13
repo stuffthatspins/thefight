@@ -40,7 +40,7 @@ body.unlocked #scene {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.40) 0%,
     rgba(0,0,0,0.35) 35%,
     rgba(0,0,0,0.35) 65%,
     rgba(0,0,0,0.85) 100%
@@ -119,7 +119,7 @@ body.unlocked #scene {
   color: #fdc10a;
   font-family: monospace;
   font-size: 16px;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.30em;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -138,7 +138,7 @@ body.unlocked #scene {
 .prompt-sub {
   display: block;
   font-size: clamp(10px, 3.1vw, 14.4px);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.17em;
   opacity: 0.5;
   margin-top: 10px;
   font-family: monospace;
@@ -381,6 +381,21 @@ body.unlocked #scene {
 @keyframes crt-roll {
   from { transform: translateY(-28vh); }
   to { transform: translateY(105vh); }
+}
+
+/* Portrait mobile: zoom to crop through middle of faces, logo over light burst */
+@media (orientation: portrait) and (max-width: 768px) {
+  #scene {
+    background-size: 170vw auto;
+    background-position: top center;
+  }
+  #logo-area {
+    margin-top: -150px;
+  }
+  #logo-img {
+    width: 80.5vw;
+    max-width: min(598px, 80.5vw);
+  }
 }
 
 /* Landscape mobile: short screens */

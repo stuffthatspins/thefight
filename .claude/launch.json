@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "thefight-dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeExecutable": "/Users/bendavis/.nvm/versions/node/v24.14.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/vite"],
       "port": 5173
     }
   ]
